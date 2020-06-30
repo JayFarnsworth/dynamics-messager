@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next){
     collection.insert({
-
+        message: req.body,
     })
       .then(resp=>{
           console.log(`POST to db: integrationId: ${req.body.integrationId}`)
